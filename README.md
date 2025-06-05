@@ -1,9 +1,9 @@
 # Fixdpi [ver. 1.0.0]
 
-Simple proxy server for watching YouTube in Russia.
-The code is written in the Java programming language.
-No third-party libraries are used in the project.
-The principle of operation is to use fragmentation to bypass DPI.
+Simple proxy server for watching YouTube in Russia.  
+The code is written in the Java programming language.  
+No third-party libraries are used in the project.  
+The principle of operation is to use fragmentation to bypass DPI.  
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -22,14 +22,12 @@ To install this project locally, follow these steps:
 
 ### Clone the Repository
 
-```git clone https://github.com/yakovitalik/fixdpi.git```
-```cd fixdpi```
+```git clone https://github.com/yakovitalik/fixdpi.git```  
+```cd fixdpi```  
 
-### Build the Project
+### Build the Project  
 
-```mvn clean install```
+```mvn clean install```  
 
-## How to use
+## How to use  
 
-It's a regular maven project. Download it and build it with the command: 
-mvn clean install
