@@ -1,9 +1,7 @@
 package com.yakovitalik.fixdpi;
 
-import java.io.IOException;
-
 public class Application {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         var proxyServer = new ProxyServer();
         proxyServer.startProxy();
     }
