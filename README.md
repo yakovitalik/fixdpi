@@ -30,7 +30,10 @@ To install this project locally, follow these steps:
 
 
 ## Usage
-Provide instructions on how to use your application here. For example:  
+Provide instructions on how to use your application here.  
+You need to install a web browser that supports proxy installation in the settings, such as Mozilla Firefox browser.  
+To do this, go to your browser settings, and make adjustments. Set the proxy host to 127.0.0.1 and port 8881. Be sure to check the box “Also use this proxy for HTTPS”.  
+Images with examples are attached.
 
 
 ## Contributing
