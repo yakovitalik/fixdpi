@@ -29,5 +29,22 @@ To install this project locally, follow these steps:
 
 ```mvn clean install```  
 
-## How to use  
+
+## Usage
+Provide instructions on how to use your application here. For example:  
+
+
+## Contributing
+We welcome contributions! Please submit pull requests for bug fixes, new features, etc.
+
+### Steps to Contribute
+1. Fork the repository.
+2. Create a branch (`git checkout -b feature/awesome_feature`).
+3. Commit your changes (`git commit -am 'Add some awesome feature'`).
+4. Push to the branch (`git push origin feature/awesome_feature`).
+5. Submit a pull request!
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
 
