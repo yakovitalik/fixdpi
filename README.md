@@ -37,8 +37,7 @@ After that, you can run this file with the command:
 ```java -jar fixdpi.jar```  
 
 ## Alternatively
-Alternatively, you can go to Release, take the already ready built fixdpi.jar file and the run-fixdpi.but file (will work for Windows),  
-copy them to the same folder on your computer and run them by opening run-fixdpi.but with two mouse clicks.
+Alternatively, you can go to Release, take the already ready built fixdpi.jar file and the run-fixdpi.but file (will work for Windows), copy them to the same folder on your computer and run them by opening run-fixdpi.but with two mouse clicks.
 
 ### Step 2:
 You need to install a web browser that supports proxy installation in the settings, such as Mozilla Firefox browser.  
