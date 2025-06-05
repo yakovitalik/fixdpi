@@ -33,12 +33,15 @@ To install this project locally, follow these steps:
 ### Step 1:
 There will be 2 .jar files in the target/ folder after generation. Take the one named fixdpi-1.0.0.0-jar-with-dependencies.jar.  
 Rename it to a usable form, e.g. fixdpi.jar.  
+After that, you can run this file with the command:  
+```java -jar fixdpi.jar```
 
 ### Step 2:
 You need to install a web browser that supports proxy installation in the settings, such as Mozilla Firefox browser.  
 To do this, go to your browser settings, and make adjustments. Set the proxy host to 127.0.0.1 and port 8881. Be sure to check the box “Also use this proxy for HTTPS”.  
-Images with examples are attached.
+Images with examples are attached.  
 
+It's all set up! You can go to the site youtube and watch videos, tested, it works!  
 
 ## Contributing
 We welcome contributions! Please submit pull requests for bug fixes, new features, etc.
