@@ -22,8 +22,12 @@ To install this project locally, follow these steps:
 
 ### Clone the Repository
 
-git clone https://github.com/yakovitalik/fixdpi.git
-cd fixdpi
+```git clone https://github.com/yakovitalik/fixdpi.git```
+```cd fixdpi```
+
+### Build the Project
+
+```mvn clean install```
 
 ## How to use
 
