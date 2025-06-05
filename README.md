@@ -10,7 +10,6 @@ The principle of operation is to use fragmentation to bypass DPI.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
@@ -43,8 +42,5 @@ We welcome contributions! Please submit pull requests for bug fixes, new feature
 3. Commit your changes (`git commit -am 'Add some awesome feature'`).
 4. Push to the branch (`git push origin feature/awesome_feature`).
 5. Submit a pull request!
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 
