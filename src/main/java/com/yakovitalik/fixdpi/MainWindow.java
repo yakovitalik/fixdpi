@@ -15,13 +15,14 @@ import javax.swing.JMenu;
 
 public class MainWindow extends JFrame {
 
+    private static final String GREETING_MESSAGE = "Для запуска прокси нажмите кнопку";
     private static final String STARTED_MESSAGE = "Прокси запущен на 127.0.0.1:8881.";
 
     private final JButton startButton, stopButton;
 
-    private final EHandler handler = new EHandler();
+    private final JLabel label;
 
-    private JLabel greetingLabel, startedLabel, emptyString;
+    private final EHandler handler = new EHandler();
 
     public MainWindow(String s) {
         super(s);
@@ -32,14 +33,10 @@ public class MainWindow extends JFrame {
         startButton = new JButton("          Запуск прокси          ");
         stopButton = new JButton("          Остановить и выйти          ");
 
-        startedLabel = new JLabel("");
-        startedLabel.setFont(new Font("Verdana", Font.PLAIN, 13));
+        label = new JLabel(GREETING_MESSAGE);
+        label.setFont(new Font("Verdana", Font.PLAIN, 13));
 
-        greetingLabel = new JLabel("Для запуска прокси нажмите кнопку");
-        greetingLabel.setFont(new Font("Verdana", Font.PLAIN, 13));
-
-        add(greetingLabel);
-        add(startedLabel);
+        add(label);
         add(startButton);
         add(stopButton);
 
@@ -69,7 +66,7 @@ public class MainWindow extends JFrame {
         public void actionPerformed(ActionEvent e) {
             if(e.getSource() == startButton) {
                 ProxyStarter.startProxy();
-                startedLabel.setText(STARTED_MESSAGE);
+                label.setText(STARTED_MESSAGE);
             }
 
             if(e.getSource() == stopButton) {
