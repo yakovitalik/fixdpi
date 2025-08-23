@@ -46,16 +46,9 @@ public class MainWindow extends JFrame {
 
     private JMenu createAboutMenu() {
         JMenu menu = new JMenu("Меню");
-
         JMenuItem aboutProg = new JMenuItem("О программе");
         menu.add(aboutProg);
-
-        aboutProg.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                AboutStart.start();
-            }
-        });
+        aboutProg.addActionListener(arg0 -> AboutStart.start());
 
         return menu;
     }
