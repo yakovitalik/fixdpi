@@ -2,6 +2,8 @@ package com.yakovitalik.fixdpi;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
+import com.yakovitalik.fixdpi.gui.MainWindow;
+
 public class Application {
     public static void main(String[] args) {
         MainWindow mainWindow = new MainWindow("FixDPI 2.0");

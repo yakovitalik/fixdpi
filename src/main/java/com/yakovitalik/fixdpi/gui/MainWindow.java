@@ -1,6 +1,6 @@
-package com.yakovitalik.fixdpi;
+package com.yakovitalik.fixdpi.gui;
 
-import com.yakovitalik.fixdpi.gui.AboutStart;
+import com.yakovitalik.fixdpi.*;
 
 import java.awt.FlowLayout;
 import java.awt.Font;
