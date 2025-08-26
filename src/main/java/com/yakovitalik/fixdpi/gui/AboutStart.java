@@ -2,6 +2,8 @@ package com.yakovitalik.fixdpi.gui;
 
 import static javax.swing.JFrame.HIDE_ON_CLOSE;
 
+import java.awt.*;
+
 public class AboutStart
 {
     public static void start()

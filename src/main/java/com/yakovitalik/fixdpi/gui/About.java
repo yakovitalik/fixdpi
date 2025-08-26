@@ -1,8 +1,8 @@
 package com.yakovitalik.fixdpi.gui;
 
+import java.awt.*;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import java.awt.FlowLayout;
 
 public class About extends JFrame {
 
@@ -17,7 +17,7 @@ public class About extends JFrame {
             "    Для этого, лучше всего использовать браузер Mozilla Firefox, <br>\n" +
             "    так как у него можно задать прокси-сервер в настройках<br>\n" +
             "    <br>\n" +
-            "    Для работы требуется версия Java не менее 1.8(Установлена по умолчанию)<br>\n" +
+            "    Для работы требуется версия Java (JDK версии 17 и выше)<br>\n" +
             "    <br>\n" +
             "    Автор: Виталий Яковлев, vintyak@gmail.com<br>\n" +
             "</html>";
@@ -26,6 +26,7 @@ public class About extends JFrame {
         super(s);
         setLayout(new FlowLayout());
         label = new JLabel(text);
+        getContentPane().setBackground(Color.GRAY);
 
         add(label);
     }

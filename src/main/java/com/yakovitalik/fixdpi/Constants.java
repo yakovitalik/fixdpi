@@ -19,7 +19,8 @@ public class Constants {
             "youtubei.googleapis.com",
             "yt-video-upload.l.google.com",
             "wide-youtube.l.google.com",
-            "linkedin.com"
+            "linkedin.com",
+            "t.me"
             );
 
     public static final String HOST = "127.0.0.1";

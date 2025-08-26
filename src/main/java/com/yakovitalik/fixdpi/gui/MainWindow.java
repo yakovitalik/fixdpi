@@ -2,8 +2,7 @@ package com.yakovitalik.fixdpi.gui;
 
 import com.yakovitalik.fixdpi.*;
 
-import java.awt.FlowLayout;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
@@ -27,14 +26,21 @@ public class MainWindow extends JFrame {
     public MainWindow(String s) {
         super(s);
         setLayout(new FlowLayout());
+        var container = getContentPane();
+        container.setBackground(Color.GRAY);
+        container.setForeground(Color.RED);
         JMenuBar menuBar = new JMenuBar();
         menuBar.add(createAboutMenu());
+        menuBar.setBackground(Color.GRAY);
         setJMenuBar(menuBar);
         startButton = new JButton("          Запуск прокси          ");
+        startButton.setBackground(Color.LIGHT_GRAY);
         stopButton = new JButton("          Остановить и выйти          ");
+        stopButton.setBackground(Color.LIGHT_GRAY);
 
         label = new JLabel(GREETING_MESSAGE);
-        label.setFont(new Font("Verdana", Font.PLAIN, 13));
+        var font = new Font("Verdana", Font.BOLD, 13);
+        label.setFont(font);
 
         add(label);
         add(startButton);
