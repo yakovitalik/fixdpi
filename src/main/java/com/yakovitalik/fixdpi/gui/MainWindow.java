@@ -1,11 +1,20 @@
 package com.yakovitalik.fixdpi.gui;
 
-import com.yakovitalik.fixdpi.*;
+import static com.yakovitalik.fixdpi.gui.Colors.BACKGROUND_COLOR;
+import static com.yakovitalik.fixdpi.gui.Colors.MENU_COLOR;
+import static com.yakovitalik.fixdpi.gui.Colors.START_BUTTON_COLOR;
+import static com.yakovitalik.fixdpi.gui.Colors.STOP_BUTTON_COLOR;
 
-import java.awt.*;
+import com.yakovitalik.fixdpi.ProxyStarter;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
@@ -17,7 +26,7 @@ public class MainWindow extends JFrame {
     private static final String GREETING_MESSAGE = "Для запуска прокси нажмите кнопку";
     private static final String STARTED_MESSAGE = "Прокси запущен на 127.0.0.1:8881.";
 
-    private final JButton startButton, stopButton;
+    private final RoundedButton startButton, stopButton;
 
     private final JLabel label;
 
@@ -26,17 +35,21 @@ public class MainWindow extends JFrame {
     public MainWindow(String s) {
         super(s);
         setLayout(new FlowLayout());
-        var container = getContentPane();
-        container.setBackground(Color.GRAY);
-        container.setForeground(Color.RED);
-        JMenuBar menuBar = new JMenuBar();
-        menuBar.add(createAboutMenu());
-        menuBar.setBackground(Color.GRAY);
-        setJMenuBar(menuBar);
-        startButton = new JButton("          Запуск прокси          ");
-        startButton.setBackground(Color.LIGHT_GRAY);
-        stopButton = new JButton("          Остановить и выйти          ");
-        stopButton.setBackground(Color.LIGHT_GRAY);
+        getContentPane().setBackground(BACKGROUND_COLOR);
+        setImage();
+        setJMenuBar(createMenuBar());
+
+        startButton = new RoundedButton("Запуск прокси", 10);
+        startButton.setPreferredSize(new Dimension(200, 20));
+        startButton.setBackground(START_BUTTON_COLOR);
+        startButton.setForeground(Color.BLACK);
+        startButton.setFont(new Font("Arial", Font.BOLD, 14));
+
+        stopButton = new RoundedButton("Остановить и выйти", 10);
+        stopButton.setPreferredSize(new Dimension(200, 20));
+        stopButton.setBackground(STOP_BUTTON_COLOR);
+        stopButton.setForeground(Color.BLACK);
+        stopButton.setFont(new Font("Arial", Font.BOLD, 14));
 
         label = new JLabel(GREETING_MESSAGE);
         var font = new Font("Verdana", Font.BOLD, 13);
@@ -50,13 +63,27 @@ public class MainWindow extends JFrame {
         stopButton.addActionListener(handler);
     }
 
+    private JMenuBar createMenuBar() {
+        JMenuBar menuBar = new JMenuBar();
+        menuBar.add(createAboutMenu());
+        menuBar.setBackground(MENU_COLOR);
+
+        return menuBar;
+    }
+
     private JMenu createAboutMenu() {
         JMenu menu = new JMenu("Меню");
         JMenuItem aboutProg = new JMenuItem("О программе");
+        aboutProg.getComponent().setBackground(MENU_COLOR);
         menu.add(aboutProg);
         aboutProg.addActionListener(arg0 -> AboutStart.start());
 
         return menu;
+    }
+
+    private void setImage() {
+        Image icon = Toolkit.getDefaultToolkit().getImage("resources/images/logo.png");
+        setIconImage(icon);
     }
 
     public class EHandler implements ActionListener {
@@ -66,6 +93,7 @@ public class MainWindow extends JFrame {
             if(e.getSource() == startButton) {
                 ProxyStarter.startProxy();
                 label.setText(STARTED_MESSAGE);
+                startButton.setVisible(false);
             }
 
             if(e.getSource() == stopButton) {
