@@ -12,8 +12,8 @@ public class AboutStart
         About about = new About("О программе");
         about.setVisible(true);
         about.setDefaultCloseOperation(HIDE_ON_CLOSE);
-        about.setSize(510, 300);
-        about.setResizable(false);
+        about.setSize(640, 340);
+        about.setResizable(true);
         about.setLocationRelativeTo(null);
         URL imageUrl = About.class.getClassLoader().getResource("images/logo.png");
         ImageIcon imageIcon = new ImageIcon(imageUrl);
