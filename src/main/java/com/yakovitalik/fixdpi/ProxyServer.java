@@ -34,8 +34,6 @@ public class ProxyServer {
     }
 
     public void startProxy() {
-        System.out.println("Прокси запущен на 127.0.0.1:8881. Приятного просмотра!");
-
         try {
             AsynchronousServerSocketChannel server = AsynchronousServerSocketChannel.open();
             server.bind(new InetSocketAddress(HOST, PORT));
