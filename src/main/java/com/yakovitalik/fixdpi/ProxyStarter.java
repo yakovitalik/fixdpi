@@ -1,12 +1,18 @@
 package com.yakovitalik.fixdpi;
 
-public class ProxyStarter {
-    public static void startProxy() {
-        Thread newThread = new Thread(() -> {
-            var proxyServer = new ProxyServer();
-            proxyServer.startProxy();
-        });
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-        newThread.start();
+public class ProxyStarter implements Runnable {
+    public static void startProxy() {
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        executorService.execute(new ProxyStarter());
+        executorService.shutdown();
+    }
+
+    @Override
+    public void run() {
+        var proxyServer = new ProxyServer();
+        proxyServer.startProxy();
     }
 }
